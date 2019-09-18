@@ -4,7 +4,7 @@ const HighestBid = ({
   bidTitle,
   currencyNameArr,
   highestBidAskArr
-}) => {
+}) => {  
   return (
     <React.Fragment>
       <div className='top-left__grid'>

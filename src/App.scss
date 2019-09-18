@@ -15,6 +15,7 @@
   height: 300px;
   background-image: linear-gradient(#3F81BC, #1F2068);
   margin-bottom: 50px;
+  flex-wrap: wrap;
 
   div {
     display: flex;
@@ -55,13 +56,23 @@
     width: 200px;
   }
 
-  .width-fifty-percent {
+  .top-card {
     width: 50%;
+    display: flex;
+    flex-direction: column;
   }
 }
 
 .table-collection {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
+@media only screen and (max-width: 600px) {
+  .top {
+    .top-card {
+      width: 500px;
+    }
+  }
+}

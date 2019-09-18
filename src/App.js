@@ -34,7 +34,7 @@ class App extends Component {
     this.setState({
       currencyPairs, selectedCurrencyDetails: {
         currencyPair,
-        currencyNameArr: currencyName.replace('/', ' ').split(' ')
+        currencyNameArr: currencyName.replace('/', ' ').split(' ').reverse()
       },
       isLoading: false,
       subscribe: true,
@@ -70,7 +70,7 @@ class App extends Component {
     this.setState({
       selectedCurrencyDetails: {
         currencyPair,
-        currencyNameArr: currencyName.replace('/', ' ').split(' ')
+        currencyNameArr: currencyName.replace('/', ' ').split(' ').reverse()
       },
       liveBookDatas: {},
       highestBid: [],
@@ -89,16 +89,17 @@ class App extends Component {
     const { currencyPairs, selectedCurrencyDetails: { currencyNameArr }, liveBookDatas, highestBid, highestAsk } = this.state;
     return (
       <div className="App">
-        <div className='header'>Crpto App</div>
+        <h1 className='header'>Crpto App</h1>
         <div className='top'>
-          <div className='width-fifty-percent'>
+          <div className='top-card'>
             <div className='top-left'>
               <h2>{currencyNameArr.length && `Highest  ${currencyNameArr[0]} - ${currencyNameArr[1]} Exchange`}</h2>
               <HighestBid bidTitle='Bid' currencyNameArr={currencyNameArr} highestBidAskArr={highestBid} />
               <HighestBid bidTitle='Ask' currencyNameArr={currencyNameArr} highestBidAskArr={highestAsk} />
             </div>
           </div>
-          <div className='width-fifty-percent'>
+          <div className='top-card'>
+            <h2>Select a currency pair</h2>
             <Dropdown
               placeholder={`${currencyPairs.length ? currencyPairs[0].text : 'Select an option'}`}
               selection options={this.state.currencyPairs}

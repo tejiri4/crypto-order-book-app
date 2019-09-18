@@ -1,10 +1,11 @@
 .table {
-  width: 30%;
+  margin-top: 20px;
+  min-width: 400px;
   background: #E6E6E6;
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
-  max-height: 500px;
-  overflow: auto;
+  min-width: 500px;
+
 
   .table-header {
     background: #ffffff;
@@ -16,6 +17,11 @@
   }
 
   .table-content {
+    height: 500px;
+    overflow: auto;
+  }
+
+  .table-row {
     display: grid;
     grid-template-columns: 20% 39.7% auto;
     grid-template-rows: 25%;
@@ -29,5 +35,9 @@
         align-items: center;
         justify-content: center;
       }
+  }
+
+  @media only screen and (max-width: 600px) {
+    min-width: 300px;
   }
 }

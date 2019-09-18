@@ -15,13 +15,19 @@ const Table = ({
         <div>{currencyNameArr[1]}</div>
       </div>
       {
-        contentArr.map((content, index) => (
-          <div className='table-content' key={index}>
-            <div>{index + 1}</div>
-            <div>{content[0]}</div>
-            <div>{content[1]}</div>
-          </div>))
+        contentArr.length ?
+          <div className='table-content'>
+            {
+              contentArr.map((content, index) => (
+                <div className='table-row' key={index}>
+                  <div>{index + 1}</div>
+                  <div>{content[0]}</div>
+                  <div>{content[1]}</div>
+                </div>))
+            }
+          </div> : <img src='https://res.cloudinary.com/store-manager/image/upload/v1568812725/Bars-1s-200px.svg'  alt='loader'/>
       }
+
     </div>
   );
 }
