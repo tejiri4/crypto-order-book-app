@@ -1,0 +1,67 @@
+.App {
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  justify-content: center;
+}
+.top {
+  display: flex;
+  width: 100%;
+  height: 300px;
+  background-image: linear-gradient(#3F81BC, #1F2068);
+  margin-bottom: 50px;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      color: #66ACE4;
+      margin-bottom: 30px;
+    }
+  }
+
+  .top-left {
+    display: flex;
+    flex-direction: column;
+
+    &__grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 20% 39.7% 39.7%;
+      grid-template-rows: 25%;
+
+
+      div {
+        height: 30px;
+        border: 1px solid #BFE6FF;
+        color: #BFE6FF;
+      }
+    }
+
+    small {
+      margin: 10px
+    }
+  }
+
+  div .dropdown{
+    height: 30px;
+    width: 200px;
+  }
+
+  .width-fifty-percent {
+    width: 50%;
+  }
+}
+
+.table-collection {
+  display: flex;
+  justify-content: space-around;
+}
+
